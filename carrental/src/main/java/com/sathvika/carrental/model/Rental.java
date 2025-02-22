@@ -1,4 +1,4 @@
-package com.carrental.services.user;
+package com.carrental.services.rental;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,12 +7,13 @@ import lombok.*;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users")
-public class User {
+@Table(name = "rentals")
+public class Rental {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String username;
-    private String password;
+    private Long carId;
+    private Long userId;
+    private int days;
 }

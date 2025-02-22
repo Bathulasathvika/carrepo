@@ -1,10 +1,8 @@
 package com.sathvika.carrental.repository;
 
-import com.sathvika.carrental.model.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
-public interface CarRepository extends JpaRepository<Car, Integer> {
+public interface CarRepository extends JpaRepository<com.carrental.services.car.Car, Long> {
 }
+
 
